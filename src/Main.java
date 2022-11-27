@@ -7,7 +7,6 @@
         book2.setPublicationYear(2019);
         System.out.println(author1 + "; " + book1);
         System.out.println(author2 + "; " + book2);
-
         System.out.println(author1.equals(author2));
         System.out.println(author1.hashCode());
     }

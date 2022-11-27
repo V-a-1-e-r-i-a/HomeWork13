@@ -34,7 +34,6 @@ public class Book {
         Book name1 = (Book) other;
         return name1.equals(name);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, authorName, publicationYear);
