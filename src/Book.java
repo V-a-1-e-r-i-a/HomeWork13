@@ -32,8 +32,8 @@ public class Book {
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
-        Book book3 = (Book) o;
-        return publicationYear == book3.publicationYear && Objects.equals(name,book3.name) && Objects.equals(authorName, book3.authorName);
+        Book book1 = (Book) o;
+        return publicationYear == book1.publicationYear && Objects.equals(name,book1.name) && Objects.equals(authorName, book1.authorName);
     }
     @Override
     public int hashCode() {
