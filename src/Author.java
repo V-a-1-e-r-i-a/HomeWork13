@@ -13,18 +13,16 @@ public class Author {
     public String getAuthorSurname(){
         return authorSurname;
     }
-
     @Override
     public String toString() {
         return "Автор: " + getAuthorName() + " " + getAuthorName();
     }
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author authorName1 = (Author) other;
-        return authorName1.equals(authorName);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(authorName, authorSurname) && Objects.equals(authorSurname, author.authorSurname);
     }
 
     @Override
