@@ -4,7 +4,7 @@ public class Author {
     private String authorName;
     private String authorSurname;
     public Author (String authorName, String authorSurname){
-        this.authorName = authorName;
+        this.authorName= authorName;
         this.authorSurname = authorSurname;
     }
     public String getAuthorName(){
@@ -15,12 +15,13 @@ public class Author {
     }
     @Override
     public String toString() {
-        return "Автор: " + getAuthorName() + " " + getAuthorName();
+        return "Автор: " + authorName + " " + authorSurname;
     }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Author author = (Author) o;
         return Objects.equals(authorName, authorSurname) && Objects.equals(authorSurname, author.authorSurname);
     }
